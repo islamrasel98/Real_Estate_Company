@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="519.0" prefWidth="696.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_estate_company.badhon.trackInstallmentPaymentsController">
+   <children>
+      <Text layoutX="14.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Customer ID" />
+      <TextField layoutX="123.0" layoutY="47.0" prefHeight="26.0" prefWidth="159.0" />
+      <TableView layoutX="23.0" layoutY="99.0" prefHeight="200.0" prefWidth="547.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="No" />
+          <TableColumn prefWidth="120.00006103515625" text="Due Date" />
+            <TableColumn prefWidth="142.39996337890625" text="Amount Due" />
+            <TableColumn prefWidth="98.39996337890625" text="Paid" />
+            <TableColumn prefWidth="112.79998779296875" text="Balance" />
+        </columns>
+      </TableView>
+      <Button layoutX="322.0" layoutY="47.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="118.0" text="Search" />
+      <DatePicker layoutX="451.0" layoutY="336.0" />
+      <Text layoutX="38.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="paymentAmount" />
+      <TextField layoutX="137.0" layoutY="335.0" prefHeight="26.0" prefWidth="159.0" />
+      <Text layoutX="336.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PaymentDate" />
+      <Button layoutX="237.0" layoutY="405.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="218.0" text="Update Payment" />
+   </children>
+</AnchorPane>
