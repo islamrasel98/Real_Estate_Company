@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.real_estate_company.AccessControlViewController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_estate_company.AccessControlViewController">
+   <children>
+      <Label layoutX="230.0" layoutY="31.0" text="Access Control" />
+      <ComboBox layoutX="109.0" layoutY="126.0" prefWidth="150.0" />
+      <Button layoutX="351.0" layoutY="103.0" mnemonicParsing="false" text="Deactivate" />
+      <TableView layoutX="53.0" layoutY="170.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <Text layoutX="52.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Device:" />
+      <Text layoutX="26.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Security Zone:" />
+      <ComboBox layoutX="109.0" layoutY="88.0" prefWidth="150.0" />
+      <ComboBox layoutX="109.0" layoutY="54.0" prefWidth="150.0" />
+      <Text layoutX="40.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Permission:" />
+      <Button layoutX="351.0" layoutY="64.0" mnemonicParsing="false" text="Activate" />
+      <Button layoutX="351.0" layoutY="141.0" mnemonicParsing="false" text="Save" />
+   </children>
 </AnchorPane>

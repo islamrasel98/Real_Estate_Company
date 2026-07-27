@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.real_estate_company.CCTVViewController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_estate_company.CCTVViewController">
+   <children>
+      <Label layoutX="239.0" layoutY="29.0" text="Label" />
+      <ComboBox layoutX="58.0" layoutY="67.0" prefWidth="150.0" />
+      <ComboBox layoutX="83.0" layoutY="117.0" prefWidth="150.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="341.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" />
+      <TextArea layoutX="58.0" layoutY="159.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button layoutX="383.0" layoutY="214.0" mnemonicParsing="false" text="Refresh" />
+      <TableView layoutX="48.0" layoutY="371.0" prefHeight="200.0" prefWidth="505.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <Text layoutX="14.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Camera:" />
+      <Text layoutX="21.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location:" />
+      <Text layoutX="300.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Video Display:" />
+      <Text layoutX="14.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alerts" />
+   </children>
 </AnchorPane>
