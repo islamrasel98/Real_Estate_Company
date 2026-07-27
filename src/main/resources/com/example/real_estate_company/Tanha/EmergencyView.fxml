@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_estate_company.EmergencyViewController">
+   <children>
+      <Label layoutX="240.0" layoutY="28.0" text="Emergency Response " />
+      <ComboBox layoutX="113.0" layoutY="80.0" prefWidth="150.0" />
+      <ComboBox layoutX="69.0" layoutY="127.0" prefWidth="150.0" />
+      <TextField layoutX="69.0" layoutY="165.0" />
+      <ComboBox layoutX="383.0" layoutY="71.0" prefWidth="150.0" />
+      <TextArea layoutX="368.0" layoutY="127.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button layoutX="409.0" layoutY="338.0" mnemonicParsing="false" text="Dispatch" />
+      <TableView layoutX="44.0" layoutY="208.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <Text layoutX="14.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Emergency Type:" />
+      <Text layoutX="14.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Severity:" />
+      <Text layoutX="14.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location:" />
+      <Text layoutX="274.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Response Team:" />
+      <Text layoutX="323.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text layoutX="323.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status:" />
+   </children>
+</AnchorPane>
