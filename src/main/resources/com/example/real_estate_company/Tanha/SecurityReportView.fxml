@@ -9,22 +9,23 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_estate_company.SecurityReportView">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_estate_company.SecurityReportViewController">
    <children>
-      <Label layoutX="243.0" layoutY="22.0" text="Security Reports" />
-      <ComboBox layoutX="97.0" layoutY="49.0" prefWidth="150.0" />
-      <DatePicker layoutX="80.0" layoutY="103.0" />
-      <DatePicker layoutX="73.0" layoutY="147.0" />
-      <Button layoutX="97.0" layoutY="185.0" mnemonicParsing="false" text="Generate Report" />
-      <TableView layoutX="352.0" layoutY="33.0" prefHeight="200.0" prefWidth="200.0">
+      <Label fx:id="securityReportsLabel" layoutX="243.0" layoutY="22.0" text="Security Reports" />
+      <ComboBox fx:id="reportTypeCB" layoutX="97.0" layoutY="49.0" prefWidth="150.0" />
+      <DatePicker fx:id="fromDateDP" layoutX="80.0" layoutY="103.0" />
+      <DatePicker fx:id="toDateDP" layoutX="73.0" layoutY="147.0" />
+      <Button layoutX="97.0" layoutY="185.0" mnemonicParsing="false" onAction="#generateReportButtonOA" text="Generate Report" />
+      <TableView fx:id="securityReportsTableView" layoutX="-20.0" layoutY="261.0" prefHeight="200.0" prefWidth="636.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn fx:id="reportTypeTC" prefWidth="198.4000244140625" text="Report Type" />
+            <TableColumn fx:id="reportyPeriodTC" prefWidth="145.5999755859375" text="Report Period" />
+            <TableColumn fx:id="totalIncidentsTC" prefWidth="156.00006103515625" text="Total Incidents" />
+            <TableColumn fx:id="generatedDateTC" prefWidth="136.0" text="Generated Date" />
         </columns>
       </TableView>
-      <Button layoutX="361.0" layoutY="267.0" mnemonicParsing="false" text="Download " />
-      <Button layoutX="475.0" layoutY="267.0" mnemonicParsing="false" text="Print" />
+      <Button layoutX="363.0" layoutY="147.0" mnemonicParsing="false" onAction="#downloadButtonOA" text="Download " />
+      <Button layoutX="363.0" layoutY="64.0" mnemonicParsing="false" onAction="#printButtonOA" text="Print" />
       <Text layoutX="14.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report Type:" />
       <Text layoutX="14.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From Date:" />
       <Text layoutX="14.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To Date:" />

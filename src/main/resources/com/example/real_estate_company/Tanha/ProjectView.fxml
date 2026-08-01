@@ -10,26 +10,28 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_estate_company.ProjectViewController">
    <children>
-      <Label layoutX="247.0" layoutY="21.0" text="Project Information" />
-      <TextField layoutX="115.0" layoutY="65.0" />
-      <TextArea layoutX="99.0" layoutY="110.0" prefHeight="200.0" prefWidth="200.0" />
-      <Button layoutX="486.0" layoutY="400.0" mnemonicParsing="false" text="Up[load Video" />
-      <Button layoutX="353.0" layoutY="400.0" mnemonicParsing="false" text="Upload Image" />
+      <Label fx:id="projectInformationLabel" layoutX="247.0" layoutY="21.0" text="Project Information" />
+      <TextField fx:id="projectNameTF" layoutX="115.0" layoutY="65.0" />
+      <TextArea fx:id="descriptionTA" layoutX="99.0" layoutY="110.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button layoutX="486.0" layoutY="400.0" mnemonicParsing="false" onAction="#uploadVideoButtonOA" text="Upload Video" />
+      <Button layoutX="353.0" layoutY="400.0" mnemonicParsing="false" onAction="#uploadImagebuttonOA" text="Upload Image" />
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="386.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" />
-      <TextArea layoutX="373.0" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" />
-      <Button layoutX="41.0" layoutY="357.0" mnemonicParsing="false" text="Save" />
-      <Button layoutX="41.0" layoutY="400.0" mnemonicParsing="false" text="Publish" />
-      <TableView layoutX="13.0" layoutY="435.0" prefHeight="200.0" prefWidth="566.0">
+      <TextArea fx:id="imageViewTA" layoutX="386.0" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button layoutX="41.0" layoutY="357.0" mnemonicParsing="false" onAction="#saveButtonOA" text="Save" />
+      <Button layoutX="237.0" layoutY="357.0" mnemonicParsing="false" onAction="#publishButtonOA" text="Publish" />
+      <TableView fx:id="projectInformationTableView" layoutX="13.0" layoutY="435.0" prefHeight="200.0" prefWidth="591.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn fx:id="projectIdTC" prefWidth="104.80002021789551" text="Project ID" />
+          <TableColumn fx:id="projectNameTC" prefWidth="121.60002899169922" text="Project Name" />
+            <TableColumn fx:id="lastUpdatedTC" prefWidth="107.199951171875" text="Last Updated" />
+            <TableColumn fx:id="publishByTC" prefWidth="123.2000732421875" text="Published By" />
+            <TableColumn fx:id="statusTC" prefWidth="135.19998168945312" text="Status" />
         </columns>
       </TableView>
       <Text layoutX="22.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Project Name:" />
-      <Text layoutX="22.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dscription:" />
+      <Text layoutX="22.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description:" />
       <Text layoutX="306.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Image View:" />
    </children>
 </AnchorPane>

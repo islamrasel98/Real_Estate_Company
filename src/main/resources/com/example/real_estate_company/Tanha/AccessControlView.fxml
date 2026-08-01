@@ -10,21 +10,24 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_estate_company.AccessControlViewController">
    <children>
-      <Label layoutX="230.0" layoutY="31.0" text="Access Control" />
-      <ComboBox layoutX="109.0" layoutY="126.0" prefWidth="150.0" />
-      <Button layoutX="351.0" layoutY="103.0" mnemonicParsing="false" text="Deactivate" />
-      <TableView layoutX="53.0" layoutY="170.0" prefHeight="200.0" prefWidth="200.0">
+      <Label fx:id="accessControllabel" layoutX="230.0" layoutY="31.0" text="Access Control" />
+      <ComboBox fx:id="PermissionCB" layoutX="109.0" layoutY="126.0" prefWidth="150.0" />
+      <Button layoutX="351.0" layoutY="103.0" mnemonicParsing="false" onAction="#deactivateButtonOA" text="Deactivate" />
+      <TableView fx:id="accessControlTableView" layoutX="-4.0" layoutY="170.0" prefHeight="230.0" prefWidth="600.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn fx:id="deviceIdTC" prefWidth="125.60003662109375" text="Device ID" />
+          <TableColumn fx:id="deviceNameTC" prefWidth="116.79998779296875" text="Device Name" />
+            <TableColumn fx:id="securityZoneTC" prefWidth="104.79998779296875" text="Security Zone" />
+            <TableColumn fx:id="accessPermissionTC" prefWidth="121.5999755859375" text="Access Permission" />
+            <TableColumn fx:id="deciveStatusTC" prefWidth="132.800048828125" text="Device Status" />
         </columns>
       </TableView>
       <Text layoutX="52.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Device:" />
       <Text layoutX="26.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Security Zone:" />
-      <ComboBox layoutX="109.0" layoutY="88.0" prefWidth="150.0" />
-      <ComboBox layoutX="109.0" layoutY="54.0" prefWidth="150.0" />
+      <ComboBox fx:id="securityZoneCB" layoutX="109.0" layoutY="88.0" prefWidth="150.0" />
+      <ComboBox fx:id="deviceCB" layoutX="109.0" layoutY="54.0" prefWidth="150.0" />
       <Text layoutX="40.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Permission:" />
-      <Button layoutX="351.0" layoutY="64.0" mnemonicParsing="false" text="Activate" />
-      <Button layoutX="351.0" layoutY="141.0" mnemonicParsing="false" text="Save" />
+      <Button layoutX="351.0" layoutY="64.0" mnemonicParsing="false" onAction="#activateButtonOA" text="Activate" />
+      <Button layoutX="351.0" layoutY="141.0" mnemonicParsing="false" onAction="#saveButtonOA" text="Save" />
    </children>
 </AnchorPane>

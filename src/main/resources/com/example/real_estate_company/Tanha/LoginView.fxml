@@ -7,15 +7,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_estate_company.LoginViewController">
    <children>
-      <Label layoutX="247.0" layoutY="28.0" text="Label" />
-      <TextField layoutX="98.0" layoutY="68.0" />
-      <TextField layoutX="98.0" layoutY="108.0" />
-      <ComboBox layoutX="92.0" layoutY="158.0" prefWidth="150.0" />
-      <Button layoutX="69.0" layoutY="233.0" mnemonicParsing="false" text="Login" />
-      <Button layoutX="167.0" layoutY="233.0" mnemonicParsing="false" text="Exit" />
+      <Label fx:id="loginLabel" layoutX="261.0" layoutY="14.0" text="LogIn" />
+      <TextField fx:id="userNameTF" layoutX="98.0" layoutY="68.0" />
+      <TextField fx:id="passwordTF" layoutX="98.0" layoutY="108.0" />
+      <ComboBox fx:id="userRoleComboBox" layoutX="92.0" layoutY="158.0" prefWidth="150.0" />
+      <Button layoutX="69.0" layoutY="233.0" mnemonicParsing="false" onAction="#loginButtonOA" text="Login" />
+      <Button layoutX="167.0" layoutY="233.0" mnemonicParsing="false" onAction="#exitButtonOA" text="Exit" />
       <Text layoutX="14.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" />
       <Text layoutX="14.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
       <Text layoutX="14.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Role:" />

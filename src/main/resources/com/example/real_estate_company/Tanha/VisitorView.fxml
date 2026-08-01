@@ -10,23 +10,25 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_estate_company.VisitorViewController">
    <children>
-      <Label layoutX="268.0" layoutY="20.0" text="Visitor Entry &amp; Exit" />
-      <TextField layoutX="95.0" layoutY="68.0" />
-      <TextField layoutX="99.0" layoutY="123.0" />
-      <TextField layoutX="67.0" layoutY="170.0" />
-      <ComboBox layoutX="377.0" layoutY="69.0" prefWidth="150.0" />
-      <TextField layoutX="377.0" layoutY="123.0" />
-      <DatePicker layoutX="369.0" layoutY="170.0" />
-      <DatePicker layoutX="369.0" layoutY="211.0" />
-      <Button layoutX="369.0" layoutY="271.0" mnemonicParsing="false" text="Register" />
-      <Button layoutX="487.0" layoutY="271.0" mnemonicParsing="false" text="Update" />
-      <TableView layoutX="67.0" layoutY="201.0" prefHeight="200.0" prefWidth="200.0">
+      <Label fx:id="visitorEntryandExitLabel" layoutX="268.0" layoutY="20.0" text="Visitor Entry &amp; Exit" />
+      <TextField fx:id="visitorNameTF" layoutX="95.0" layoutY="68.0" />
+      <TextField fx:id="nationalIdTF" layoutX="99.0" layoutY="123.0" />
+      <TextField fx:id="phoneTF" layoutX="67.0" layoutY="170.0" />
+      <ComboBox fx:id="hostCB" layoutX="377.0" layoutY="69.0" prefWidth="150.0" />
+      <TextField fx:id="purposeTF" layoutX="377.0" layoutY="123.0" />
+      <DatePicker fx:id="entryDateDP" layoutX="369.0" layoutY="170.0" />
+      <DatePicker fx:id="exitDateDP" layoutX="369.0" layoutY="211.0" />
+      <Button layoutX="369.0" layoutY="271.0" mnemonicParsing="false" onAction="#registerButtonOA" text="Register" />
+      <Button layoutX="487.0" layoutY="271.0" mnemonicParsing="false" onAction="#updateButtonOA" text="Update" />
+      <TableView fx:id="visitorEntryandExitTableView" layoutX="-10.0" layoutY="309.0" prefHeight="200.0" prefWidth="609.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn fx:id="visitorNameTC" prefWidth="148.00006675720215" text="Visitor Name" />
+          <TableColumn fx:id="nationalIdTC" prefWidth="119.20001220703125" text="National ID" />
+            <TableColumn fx:id="phoneNumberTC" prefWidth="131.20001220703125" text="Phone Number" />
+            <TableColumn fx:id="entryDateTC" prefWidth="85.5999755859375" text="Entry Date" />
+            <TableColumn fx:id="exitDateTC" prefWidth="127.99996948242188" text="Exit Date" />
         </columns>
       </TableView>
       <Text layoutX="14.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Visitor Name:" />

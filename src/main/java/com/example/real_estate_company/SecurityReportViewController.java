@@ -1,6 +1,9 @@
 package com.example.real_estate_company;
 
-public class SecurityReportView
+import javafx.event.ActionEvent;
+import javafx.scene.control.*;
+
+public class SecurityReportViewController
 {
     @javafx.fxml.FXML
     private TableView securityReportsTableView;

@@ -10,22 +10,23 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_estate_company.PromotionViewController">
    <children>
-      <Label layoutX="239.0" layoutY="14.0" text="Label" />
-      <TextField layoutX="126.0" layoutY="62.0" />
-      <TextField layoutX="85.0" layoutY="115.0" />
-      <DatePicker layoutX="85.0" layoutY="168.0" />
-      <DatePicker layoutX="85.0" layoutY="208.0" />
-      <ComboBox layoutX="443.0" layoutY="63.0" prefWidth="150.0" />
-      <ComboBox layoutX="434.0" layoutY="115.0" prefWidth="150.0" />
-      <Button layoutX="376.0" layoutY="168.0" mnemonicParsing="false" text="Active" />
-      <Button layoutX="376.0" layoutY="208.0" mnemonicParsing="false" text="Save" />
-      <TableView layoutX="46.0" layoutY="250.0" prefHeight="200.0" prefWidth="521.0">
+      <Label fx:id="promotionandDiscountLabel" layoutX="239.0" layoutY="14.0" text="Promotion &amp; Discount" />
+      <TextField fx:id="promotionNameTF" layoutX="126.0" layoutY="62.0" />
+      <TextField fx:id="discountTF" layoutX="85.0" layoutY="115.0" />
+      <DatePicker fx:id="startDateDP" layoutX="85.0" layoutY="168.0" />
+      <DatePicker fx:id="endDateDP" layoutX="85.0" layoutY="208.0" />
+      <ComboBox fx:id="applicablePropertyCB" layoutX="443.0" layoutY="63.0" prefWidth="150.0" />
+      <ComboBox fx:id="approvalStatusCB" layoutX="434.0" layoutY="115.0" prefWidth="150.0" />
+      <Button layoutX="376.0" layoutY="168.0" mnemonicParsing="false" onAction="#activeButtonOA" text="Active" />
+      <Button layoutX="376.0" layoutY="208.0" mnemonicParsing="false" onAction="#savebuttonOA" text="Save" />
+      <TableView fx:id="promotionandDiscountTableView" layoutX="-1.0" layoutY="250.0" prefHeight="200.0" prefWidth="607.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn fx:id="promotionNameTC" prefWidth="155.20001220703125" text="Promotion Name" />
+          <TableColumn fx:id="discountTC" prefWidth="149.5999755859375" text="Discount (%)" />
+            <TableColumn fx:id="endDateTC" prefWidth="155.20001220703125" text="End Date" />
+            <TableColumn fx:id="statusTC" prefWidth="147.199951171875" text="Status" />
         </columns>
       </TableView>
       <Text layoutX="20.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Promotion Name:" />

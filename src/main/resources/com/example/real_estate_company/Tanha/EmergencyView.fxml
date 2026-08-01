@@ -10,24 +10,26 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_estate_company.EmergencyViewController">
    <children>
-      <Label layoutX="240.0" layoutY="28.0" text="Emergency Response " />
-      <ComboBox layoutX="113.0" layoutY="80.0" prefWidth="150.0" />
-      <ComboBox layoutX="69.0" layoutY="127.0" prefWidth="150.0" />
-      <TextField layoutX="69.0" layoutY="165.0" />
-      <ComboBox layoutX="383.0" layoutY="71.0" prefWidth="150.0" />
-      <TextArea layoutX="368.0" layoutY="127.0" prefHeight="200.0" prefWidth="200.0" />
-      <Button layoutX="409.0" layoutY="338.0" mnemonicParsing="false" text="Dispatch" />
-      <TableView layoutX="44.0" layoutY="208.0" prefHeight="200.0" prefWidth="200.0">
+      <Label fx:id="emergencyResponseLabel" layoutX="240.0" layoutY="28.0" text="Emergency Response " />
+      <ComboBox fx:id="emergencyTypeCB" layoutX="113.0" layoutY="80.0" prefWidth="150.0" />
+      <ComboBox fx:id="severityCB" layoutX="69.0" layoutY="127.0" prefWidth="150.0" />
+      <TextField fx:id="locationTF" layoutX="69.0" layoutY="165.0" />
+      <ComboBox fx:id="responseTeamCB" layoutX="383.0" layoutY="71.0" prefWidth="150.0" />
+      <TextArea fx:id="statusTA" layoutX="368.0" layoutY="127.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button layoutX="409.0" layoutY="338.0" mnemonicParsing="false" onAction="#dispatchButtonOA" text="Dispatch" />
+      <TableView fx:id="emergencyResponseTableView" layoutX="-5.0" layoutY="374.0" prefHeight="200.0" prefWidth="600.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn fx:id="emergencyIdButtonOA" prefWidth="132.7999906539917" text="Emergency ID" />
+          <TableColumn fx:id="emergencyTypeTC" prefWidth="120.0" text="Emergency Type" />
+            <TableColumn fx:id="locationTC" prefWidth="112.80003356933594" text="Location" />
+            <TableColumn fx:id="responseTeamTC" prefWidth="107.199951171875" text="Response Team" />
+            <TableColumn fx:id="statusTC" prefWidth="131.2000732421875" text="Status" />
         </columns>
       </TableView>
       <Text layoutX="14.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Emergency Type:" />
-      <Text layoutX="14.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Severity:" />
+      <Text fx:id="severity" layoutX="14.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Severity:" />
       <Text layoutX="14.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location:" />
       <Text layoutX="274.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Response Team:" />
       <Text layoutX="323.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" />

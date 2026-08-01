@@ -13,26 +13,25 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_estate_company.AdvertisementViewController">
    <children>
-      <Label layoutX="261.0" layoutY="30.0" text="Propety Advertisement" />
-      <TextField layoutX="134.0" layoutY="63.0" />
-      <TextField layoutX="142.0" layoutY="103.0" prefHeight="30.0" prefWidth="119.0" />
-      <ComboBox layoutX="80.0" layoutY="143.0" prefWidth="150.0" />
-      <TextArea layoutX="74.0" layoutY="201.0" prefHeight="200.0" prefWidth="200.0" />
-      <TextField layoutX="385.0" layoutY="63.0" />
-      <DatePicker layoutX="371.0" layoutY="103.0" />
-      <CheckBox layoutX="371.0" layoutY="148.0" mnemonicParsing="false" text="Website" />
-      <CheckBox layoutX="371.0" layoutY="176.0" mnemonicParsing="false" text="Facebook" />
-      <CheckBox layoutX="371.0" layoutY="200.0" mnemonicParsing="false" text="Instagram" />
-      <CheckBox layoutX="371.0" layoutY="226.0" mnemonicParsing="false" text="Linkedin" />
-      <Button layoutX="385.0" layoutY="256.0" mnemonicParsing="false" text="Upload Image" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="469.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true" />
-      <Button layoutX="280.0" layoutY="312.0" mnemonicParsing="false" text="Save" />
-      <Button layoutX="335.0" layoutY="312.0" mnemonicParsing="false" text="Publish" />
-      <Button layoutX="440.0" layoutY="312.0" mnemonicParsing="false" text="Cancel" />
-      <TableView layoutX="3.0" layoutY="400.0" prefHeight="200.0" prefWidth="642.0">
+      <Label fx:id="propertyAdvertisementlabel" layoutX="261.0" layoutY="30.0" text="Propety Advertisement" />
+      <TextField fx:id="advertisementIdTF" layoutX="134.0" layoutY="63.0" />
+      <TextField fx:id="advertisementTitleTF" layoutX="142.0" layoutY="103.0" prefHeight="30.0" prefWidth="119.0" />
+      <ComboBox fx:id="propertyCB" layoutX="80.0" layoutY="143.0" prefWidth="150.0" />
+      <TextArea fx:id="descriptionTA" layoutX="80.0" layoutY="201.0" prefHeight="200.0" prefWidth="200.0" />
+      <TextField fx:id="budgetTF" layoutX="385.0" layoutY="63.0" />
+      <DatePicker fx:id="publicationDateDP" layoutX="371.0" layoutY="103.0" />
+      <CheckBox fx:id="websiteCheckBox" layoutX="371.0" layoutY="148.0" mnemonicParsing="false" text="Website" />
+      <CheckBox fx:id="facebookCheckBox" layoutX="371.0" layoutY="176.0" mnemonicParsing="false" text="Facebook" />
+      <CheckBox fx:id="InstagramCheckBox" layoutX="371.0" layoutY="200.0" mnemonicParsing="false" text="Instagram" />
+      <CheckBox fx:id="linkedinCheckBox" layoutX="371.0" layoutY="226.0" mnemonicParsing="false" text="Linkedin" />
+      <Button layoutX="385.0" layoutY="256.0" mnemonicParsing="false" onAction="#uploadImageButtonOA" text="Upload Image" />
+      <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="179.0" layoutX="490.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="301.0" layoutY="312.0" mnemonicParsing="false" onAction="#saveButtonOA" text="Save" />
+      <Button layoutX="377.0" layoutY="312.0" mnemonicParsing="false" onAction="#publishButtonOA" text="Publish" />
+      <Button layoutX="487.0" layoutY="312.0" mnemonicParsing="false" onAction="#cancelButtonOA" text="Cancel" />
+      <TableView fx:id="propertyAdvertisementTableView" layoutX="3.0" layoutY="400.0" prefHeight="200.0" prefWidth="642.0">
         <columns>
           <TableColumn prefWidth="75.0" text="C1" />
           <TableColumn prefWidth="75.0" text="C2" />
