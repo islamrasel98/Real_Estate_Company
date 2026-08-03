@@ -22,31 +22,23 @@ public class LeadViewController
     @javafx.fxml.FXML
     private TableColumn leadStatusTC;
     @javafx.fxml.FXML
+    private TextField emailTF;
+    @javafx.fxml.FXML
+    private TextArea noteTA;
+    @javafx.fxml.FXML
     private TableColumn followUPDateTC;
     @javafx.fxml.FXML
     private DatePicker followupDateDP;
-    @javafx.fxml.FXML
-    private TextField leadIDTF;
-    @javafx.fxml.FXML
-    private TableColumn leadIDTC;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
-    @Deprecated
+    @javafx.fxml.FXML
     public void deleteButtonOA(ActionEvent actionEvent) {
     }
 
-    @Deprecated
+    @javafx.fxml.FXML
     public void updateButtonOA(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void searchLeadButtonOA(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void addLeadButtonOA(ActionEvent actionEvent) {
     }
 }

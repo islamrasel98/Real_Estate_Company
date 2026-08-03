@@ -1,17 +1,19 @@
 package Tanha;
 
-public class SecurityReport { private String reportId;
-    private String reportType;
+public class LeadReport {
+    private String reportId;
     private String reportPeriod;
-    private int totalIncidents;
+    private int totalLeads;
+    private float conversionRate;
     private String generatedDate;
 
-    public SecurityReport(String reportId, String reportType, String reportPeriod, int totalIncidents, String generatedDate) {
+    public LeadReport(String reportId, String reportPeriod, int totalLeads, float conversionRate, String generatedDate) {
         this.reportId = reportId;
-        this.reportType = reportType;
         this.reportPeriod = reportPeriod;
-        this.totalIncidents = totalIncidents;
+        this.totalLeads = totalLeads;
+        this.conversionRate = conversionRate;
         this.generatedDate = generatedDate;
+
     }
 
     public String getReportId() {
@@ -22,14 +24,6 @@ public class SecurityReport { private String reportId;
         this.reportId = reportId;
     }
 
-    public String getReportType() {
-        return reportType;
-    }
-
-    public void setReportType(String reportType) {
-        this.reportType = reportType;
-    }
-
     public String getReportPeriod() {
         return reportPeriod;
     }
@@ -38,12 +32,20 @@ public class SecurityReport { private String reportId;
         this.reportPeriod = reportPeriod;
     }
 
-    public int getTotalIncidents() {
-        return totalIncidents;
+    public int getTotalLeads() {
+        return totalLeads;
     }
 
-    public void setTotalIncidents(int totalIncidents) {
-        this.totalIncidents = totalIncidents;
+    public void setTotalLeads(int totalLeads) {
+        this.totalLeads = totalLeads;
+    }
+
+    public float getConversionRate() {
+        return conversionRate;
+    }
+
+    public void setConversionRate(float conversionRate) {
+        this.conversionRate = conversionRate;
     }
 
     public String getGeneratedDate() {
@@ -56,11 +58,11 @@ public class SecurityReport { private String reportId;
 
     @Override
     public String toString() {
-        return "SecurityReport{" +
+        return "LeadReport{" +
                 "reportId='" + reportId + '\'' +
-                ", reportType='" + reportType + '\'' +
                 ", reportPeriod='" + reportPeriod + '\'' +
-                ", totalIncidents=" + totalIncidents +
+                ", totalLeads=" + totalLeads +
+                ", conversionRate=" + conversionRate +
                 ", generatedDate='" + generatedDate + '\'' +
                 '}';
     }
