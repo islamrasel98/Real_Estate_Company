@@ -6,11 +6,7 @@ import javafx.scene.control.*;
 public class ProperSecurityMonitoringViewController
 {
     @javafx.fxml.FXML
-    private TableColumn sensorStatusTC;
-    @javafx.fxml.FXML
     private TableColumn incidentStatusTC;
-    @javafx.fxml.FXML
-    private TextField sensorStatusTF;
     @javafx.fxml.FXML
     private TableView propertySecurityMonitoringTableView;
     @javafx.fxml.FXML
@@ -29,6 +25,8 @@ public class ProperSecurityMonitoringViewController
     private TextField alarmStatusTF;
     @javafx.fxml.FXML
     private TextArea incidentAlertTA;
+    @javafx.fxml.FXML
+    private Button saveButtonOA;
 
     @javafx.fxml.FXML
     public void initialize() {

@@ -3,26 +3,12 @@ package com.example.real_estate_company;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 
-import javax.swing.text.html.ImageView;
-
 public class AdvertisementViewController
 {
     @javafx.fxml.FXML
     private TextField advertisementTitleTF;
     @javafx.fxml.FXML
-    private CheckBox websiteCheckBox;
-    @javafx.fxml.FXML
-    private CheckBox linkedinCheckBox;
-    @javafx.fxml.FXML
-    private CheckBox facebookCheckBox;
-    @javafx.fxml.FXML
     private DatePicker publicationDateDP;
-    @javafx.fxml.FXML
-    private CheckBox InstagramCheckBox;
-    @javafx.fxml.FXML
-    private ImageView imageView;
-    @javafx.fxml.FXML
-    private TextArea descriptionTA;
     @javafx.fxml.FXML
     private Label propertyAdvertisementlabel;
     @javafx.fxml.FXML
@@ -33,24 +19,60 @@ public class AdvertisementViewController
     private TextField budgetTF;
     @javafx.fxml.FXML
     private TextField advertisementIdTF;
+    @javafx.fxml.FXML
+    private TableColumn advertisementIdTC;
+    @javafx.fxml.FXML
+    private ComboBox statusCB;
+    @javafx.fxml.FXML
+    private TableColumn propertyTC;
+    @javafx.fxml.FXML
+    private TableColumn publishDateTC;
+    @javafx.fxml.FXML
+    private TableColumn channelTC;
+    @javafx.fxml.FXML
+    private ComboBox statusComboBox;
+    @javafx.fxml.FXML
+    private ComboBox propertyNameCB;
+    @javafx.fxml.FXML
+    private TableColumn statusTC;
+    @javafx.fxml.FXML
+    private ComboBox publicationChannelCB;
+    @javafx.fxml.FXML
+    private Label successorerrormessageLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void cancelButtonOA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void uploadImageButtonOA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void publishButtonOA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void saveButtonOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void searchButtonOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void clearButtonOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void searchAdvertisementButtonOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void addAdvertisementButtonOA(ActionEvent actionEvent) {
     }
 }

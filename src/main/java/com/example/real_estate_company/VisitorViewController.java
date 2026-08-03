@@ -8,8 +8,6 @@ public class VisitorViewController
     @javafx.fxml.FXML
     private TextField phoneTF;
     @javafx.fxml.FXML
-    private TextField purposeTF;
-    @javafx.fxml.FXML
     private Label visitorEntryandExitLabel;
     @javafx.fxml.FXML
     private TableColumn visitorNameTC;
@@ -42,7 +40,11 @@ public class VisitorViewController
     public void registerButtonOA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void updateButtonOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void searchButtonOA(ActionEvent actionEvent) {
     }
 }

@@ -14,17 +14,11 @@ public class PromotionViewController
     @javafx.fxml.FXML
     private DatePicker endDateDP;
     @javafx.fxml.FXML
-    private ComboBox applicablePropertyCB;
-    @javafx.fxml.FXML
     private TableColumn promotionNameTC;
-    @javafx.fxml.FXML
-    private ComboBox approvalStatusCB;
     @javafx.fxml.FXML
     private TableColumn statusTC;
     @javafx.fxml.FXML
     private TextField promotionNameTF;
-    @javafx.fxml.FXML
-    private DatePicker startDateDP;
     @javafx.fxml.FXML
     private TableColumn endDateTC;
     @javafx.fxml.FXML
@@ -34,11 +28,19 @@ public class PromotionViewController
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void activeButtonOA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void savebuttonOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void addpromotionButtonOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void searchPromotionbuttonOA(ActionEvent actionEvent) {
     }
 }

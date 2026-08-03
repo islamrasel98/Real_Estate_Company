@@ -6,12 +6,6 @@ import javafx.scene.control.*;
 public class PropertyListingViewController
 {
     @javafx.fxml.FXML
-    private CheckBox websiteCheckBox;
-    @javafx.fxml.FXML
-    private TableColumn contactNumberTC;
-    @javafx.fxml.FXML
-    private CheckBox facebookCheckBox;
-    @javafx.fxml.FXML
     private Label propertyListingLabel;
     @javafx.fxml.FXML
     private TableView propertyListingTableView;
@@ -22,23 +16,37 @@ public class PropertyListingViewController
     @javafx.fxml.FXML
     private TextField listingPriceTF;
     @javafx.fxml.FXML
-    private CheckBox instagramCheckBox;
-    @javafx.fxml.FXML
-    private TextField contactNameTF;
-    @javafx.fxml.FXML
     private TableColumn listingPriceTC;
     @javafx.fxml.FXML
     private TableColumn publishDateTC;
+    @javafx.fxml.FXML
+    private TextField propertyIDTF;
+    @javafx.fxml.FXML
+    private TextField propertyNameTF;
+    @javafx.fxml.FXML
+    private DatePicker publishDateDP;
+    @javafx.fxml.FXML
+    private TableColumn propertyIdTC;
+    @javafx.fxml.FXML
+    private Label successorErrorLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void cancelButtonOA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void publishButtonOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void addListingButtonOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void searchListingButtonOA(ActionEvent actionEvent) {
     }
 }

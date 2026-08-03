@@ -7,25 +7,11 @@ import javafx.scene.control.*;
 public class CampaignViewController
 {
     @javafx.fxml.FXML
-    private CheckBox websiteCheckBox;
-    @javafx.fxml.FXML
-    private TableColumn conversionRateTC;
-    @javafx.fxml.FXML
     private Label campaignDashboardLabel;
     @javafx.fxml.FXML
     private TableColumn campaignNameTC;
     @javafx.fxml.FXML
-    private CheckBox facebookCheckBox;
-    @javafx.fxml.FXML
     private TextField campaignNameTF;
-    @javafx.fxml.FXML
-    private CheckBox smsCheckBox;
-    @javafx.fxml.FXML
-    private TableColumn analysisPeriodTC;
-    @javafx.fxml.FXML
-    private TextArea objectiveTA;
-    @javafx.fxml.FXML
-    private CheckBox emailCheckBox;
     @javafx.fxml.FXML
     private DatePicker endDateDP;
     @javafx.fxml.FXML
@@ -34,6 +20,14 @@ public class CampaignViewController
     private DatePicker startDateDP;
     @javafx.fxml.FXML
     private TableColumn campaignIdTC;
+    @javafx.fxml.FXML
+    private ComboBox channelCB;
+    @javafx.fxml.FXML
+    private Label successorErrorLabel;
+    @javafx.fxml.FXML
+    private TableColumn startDateTC;
+    @javafx.fxml.FXML
+    private TableColumn budgetTC;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -43,11 +37,19 @@ public class CampaignViewController
     public void campaignDashBoardTableView(Event event) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void launchCampaignButtonOA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void saveButtonOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void SearchCampaignButtonOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void addCampaignButtonOA(ActionEvent actionEvent) {
     }
 }

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -15,12 +14,9 @@
       <Label fx:id="promotionandDiscountLabel" layoutX="239.0" layoutY="14.0" text="Promotion &amp; Discount" />
       <TextField fx:id="promotionNameTF" layoutX="126.0" layoutY="62.0" />
       <TextField fx:id="discountTF" layoutX="85.0" layoutY="115.0" />
-      <DatePicker fx:id="startDateDP" layoutX="85.0" layoutY="168.0" />
-      <DatePicker fx:id="endDateDP" layoutX="85.0" layoutY="208.0" />
-      <ComboBox fx:id="applicablePropertyCB" layoutX="443.0" layoutY="63.0" prefWidth="150.0" />
-      <ComboBox fx:id="approvalStatusCB" layoutX="434.0" layoutY="115.0" prefWidth="150.0" />
-      <Button layoutX="376.0" layoutY="168.0" mnemonicParsing="false" onAction="#activeButtonOA" text="Active" />
-      <Button layoutX="376.0" layoutY="208.0" mnemonicParsing="false" onAction="#savebuttonOA" text="Save" />
+      <DatePicker fx:id="endDateDP" layoutX="85.0" layoutY="160.0" />
+      <Button layoutX="391.0" layoutY="77.0" mnemonicParsing="false" onAction="#addpromotionButtonOA" text="Add Promotion" />
+      <Button layoutX="383.0" layoutY="130.0" mnemonicParsing="false" onAction="#searchPromotionbuttonOA" text="Search promotion" />
       <TableView fx:id="promotionandDiscountTableView" layoutX="-1.0" layoutY="250.0" prefHeight="200.0" prefWidth="607.0">
         <columns>
           <TableColumn fx:id="promotionNameTC" prefWidth="155.20001220703125" text="Promotion Name" />
@@ -31,9 +27,6 @@
       </TableView>
       <Text layoutX="20.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Promotion Name:" />
       <Text layoutX="20.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Discount:" />
-      <Text layoutX="20.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Date:" />
-      <Text layoutX="20.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Date:" />
-      <Text layoutX="322.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Applicable Property:" />
-      <Text layoutX="322.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Approval Status:" />
+      <Text layoutX="14.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Date:" />
    </children>
 </AnchorPane>

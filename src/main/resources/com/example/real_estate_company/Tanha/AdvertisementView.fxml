@@ -1,47 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.gluonhq.charm.glisten.control.BottomNavigationButton?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_estate_company.AdvertisementViewController">
+<AnchorPane prefHeight="676.0" prefWidth="645.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_estate_company.AdvertisementViewController">
    <children>
       <Label fx:id="propertyAdvertisementlabel" layoutX="261.0" layoutY="30.0" text="Propety Advertisement" />
       <TextField fx:id="advertisementIdTF" layoutX="134.0" layoutY="63.0" />
       <TextField fx:id="advertisementTitleTF" layoutX="142.0" layoutY="103.0" prefHeight="30.0" prefWidth="119.0" />
-      <ComboBox fx:id="propertyCB" layoutX="80.0" layoutY="143.0" prefWidth="150.0" />
-      <TextArea fx:id="descriptionTA" layoutX="80.0" layoutY="201.0" prefHeight="200.0" prefWidth="200.0" />
+      <ComboBox fx:id="propertyNameCB" layoutX="114.0" layoutY="143.0" prefWidth="150.0" />
       <TextField fx:id="budgetTF" layoutX="385.0" layoutY="63.0" />
       <DatePicker fx:id="publicationDateDP" layoutX="371.0" layoutY="103.0" />
-      <CheckBox fx:id="websiteCheckBox" layoutX="371.0" layoutY="148.0" mnemonicParsing="false" text="Website" />
-      <CheckBox fx:id="facebookCheckBox" layoutX="371.0" layoutY="176.0" mnemonicParsing="false" text="Facebook" />
-      <CheckBox fx:id="InstagramCheckBox" layoutX="371.0" layoutY="200.0" mnemonicParsing="false" text="Instagram" />
-      <CheckBox fx:id="linkedinCheckBox" layoutX="371.0" layoutY="226.0" mnemonicParsing="false" text="Linkedin" />
-      <Button layoutX="385.0" layoutY="256.0" mnemonicParsing="false" onAction="#uploadImageButtonOA" text="Upload Image" />
-      <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="179.0" layoutX="490.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true" />
-      <Button layoutX="301.0" layoutY="312.0" mnemonicParsing="false" onAction="#saveButtonOA" text="Save" />
-      <Button layoutX="377.0" layoutY="312.0" mnemonicParsing="false" onAction="#publishButtonOA" text="Publish" />
-      <Button layoutX="487.0" layoutY="312.0" mnemonicParsing="false" onAction="#cancelButtonOA" text="Cancel" />
+      <Button layoutX="38.0" layoutY="192.0" mnemonicParsing="false" onAction="#addAdvertisementButtonOA" prefHeight="30.0" prefWidth="150.0" text="Add Advertisement" />
+      <Button layoutX="40.0" layoutY="239.0" mnemonicParsing="false" onAction="#searchAdvertisementButtonOA" text="Search Advertisement" />
+      <Button layoutX="90.0" layoutY="285.0" mnemonicParsing="false" onAction="#clearButtonOA" text="Clear" />
       <TableView fx:id="propertyAdvertisementTableView" layoutX="3.0" layoutY="400.0" prefHeight="200.0" prefWidth="642.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn fx:id="advertisementIdTC" prefWidth="146.3999695777893" text="Advertisement ID" />
+          <TableColumn fx:id="propertyTC" minWidth="4.0" prefWidth="96.800048828125" text="Property" />
+            <TableColumn fx:id="publishDateTC" minWidth="0.0" prefWidth="117.5999755859375" text="Publish Date" />
+            <TableColumn fx:id="channelTC" prefWidth="119.20001220703125" text="Channel" />
+            <TableColumn fx:id="statusTC" prefWidth="163.19998168945312" text="Status" />
         </columns>
       </TableView>
       <Text layoutX="20.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Advertisement ID:" />
       <Text layoutX="20.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Advertisement Title:" />
-      <Text layoutX="20.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Property:" />
+      <Text layoutX="20.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Property Name:" />
       <Text layoutX="335.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Budget:" />
       <Text layoutX="261.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Publication Date:" />
-      <Text layoutX="7.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+      <ComboBox fx:id="publicationChannelCB" layoutX="412.0" layoutY="143.0" prefWidth="150.0" />
+      <ComboBox fx:id="statusCB" layoutX="412.0" layoutY="202.0" prefWidth="150.0" />
+      <Text layoutX="358.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text layoutX="372.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status:" />
+      <Text layoutX="287.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Publication Channel:" />
+      <Label fx:id="successorerrormessageLabel" layoutX="182.0" layoutY="334.0" prefHeight="41.0" prefWidth="332.0" text="                       Success/Error Message" />
+      <ComboBox fx:id="statusComboBox" layoutX="90.0" layoutY="615.0" prefWidth="150.0" />
+      <ComboBox fx:id="propertyCB" layoutX="478.0" layoutY="615.0" prefWidth="150.0" />
+      <BottomNavigationButton layoutX="301.0" layoutY="630.0" onAction="#searchButtonOA" text="Search" />
+      <Text layoutX="40.0" layoutY="635.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" />
+      <Text layoutX="426.0" layoutY="635.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Property" />
    </children>
 </AnchorPane>
