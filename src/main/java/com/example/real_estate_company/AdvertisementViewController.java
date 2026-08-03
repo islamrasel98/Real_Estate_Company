@@ -1,5 +1,6 @@
 package com.example.real_estate_company;
 
+import Tanha.Advertisement;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 
@@ -12,31 +13,31 @@ public class AdvertisementViewController
     @javafx.fxml.FXML
     private Label propertyAdvertisementlabel;
     @javafx.fxml.FXML
-    private TableView propertyAdvertisementTableView;
+    private TableView<Advertisement> propertyAdvertisementTableView;
     @javafx.fxml.FXML
-    private ComboBox propertyCB;
+    private ComboBox<String> propertyCB;
     @javafx.fxml.FXML
     private TextField budgetTF;
     @javafx.fxml.FXML
     private TextField advertisementIdTF;
     @javafx.fxml.FXML
-    private TableColumn advertisementIdTC;
+    private TableColumn<Advertisement,String> advertisementIdTC;
     @javafx.fxml.FXML
-    private ComboBox statusCB;
+    private ComboBox<String> statusCB;
     @javafx.fxml.FXML
-    private TableColumn propertyTC;
+    private TableColumn<Advertisement,String> propertyTC;
     @javafx.fxml.FXML
-    private TableColumn publishDateTC;
+    private TableColumn<Advertisement,String> publishDateTC;
     @javafx.fxml.FXML
-    private TableColumn channelTC;
+    private TableColumn<Advertisement,String>channelTC;
     @javafx.fxml.FXML
-    private ComboBox statusComboBox;
+    private ComboBox<String> statusComboBox;
     @javafx.fxml.FXML
-    private ComboBox propertyNameCB;
+    private ComboBox<String> propertyNameCB;
     @javafx.fxml.FXML
-    private TableColumn statusTC;
+    private TableColumn<Advertisement,String> statusTC;
     @javafx.fxml.FXML
-    private ComboBox publicationChannelCB;
+    private ComboBox<String> publicationChannelCB;
     @javafx.fxml.FXML
     private Label successorerrormessageLabel;
 

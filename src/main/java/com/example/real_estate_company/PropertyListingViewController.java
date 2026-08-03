@@ -1,5 +1,6 @@
 package com.example.real_estate_company;
 
+import Tanha.PropertyListing;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 
@@ -8,17 +9,17 @@ public class PropertyListingViewController
     @javafx.fxml.FXML
     private Label propertyListingLabel;
     @javafx.fxml.FXML
-    private TableView propertyListingTableView;
+    private TableView<PropertyListing> propertyListingTableView;
     @javafx.fxml.FXML
-    private TableColumn propertyNameTC;
+    private TableColumn<PropertyListing,String> propertyNameTC;
     @javafx.fxml.FXML
-    private ComboBox propertyCB;
+    private ComboBox<String> propertyCB;
     @javafx.fxml.FXML
     private TextField listingPriceTF;
     @javafx.fxml.FXML
-    private TableColumn listingPriceTC;
+    private TableColumn<PropertyListing,String> listingPriceTC;
     @javafx.fxml.FXML
-    private TableColumn publishDateTC;
+    private TableColumn<PropertyListing,String> publishDateTC;
     @javafx.fxml.FXML
     private TextField propertyIDTF;
     @javafx.fxml.FXML
@@ -26,7 +27,7 @@ public class PropertyListingViewController
     @javafx.fxml.FXML
     private DatePicker publishDateDP;
     @javafx.fxml.FXML
-    private TableColumn propertyIdTC;
+    private TableColumn<PropertyListing,String> propertyIdTC;
     @javafx.fxml.FXML
     private Label successorErrorLabel;
 

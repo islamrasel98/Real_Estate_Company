@@ -1,12 +1,13 @@
 package com.example.real_estate_company;
 
+import Tanha.Promotion;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 
 public class PromotionViewController
 {
     @javafx.fxml.FXML
-    private TableColumn discountTC;
+    private TableColumn<Promotion,Float> discountTC;
     @javafx.fxml.FXML
     private Label promotionandDiscountLabel;
     @javafx.fxml.FXML
@@ -14,15 +15,15 @@ public class PromotionViewController
     @javafx.fxml.FXML
     private DatePicker endDateDP;
     @javafx.fxml.FXML
-    private TableColumn promotionNameTC;
+    private TableColumn<Promotion,String> promotionNameTC;
     @javafx.fxml.FXML
-    private TableColumn statusTC;
+    private TableColumn<Promotion,String> statusTC;
     @javafx.fxml.FXML
     private TextField promotionNameTF;
     @javafx.fxml.FXML
-    private TableColumn endDateTC;
+    private TableColumn<Promotion,String> endDateTC;
     @javafx.fxml.FXML
-    private TableView promotionandDiscountTableView;
+    private TableView<Promotion> promotionandDiscountTableView;
 
     @javafx.fxml.FXML
     public void initialize() {

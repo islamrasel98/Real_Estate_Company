@@ -1,26 +1,27 @@
 package com.example.real_estate_company;
 
+import Tanha.SecurityReport;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 
 public class SecurityReportViewController
 {
     @javafx.fxml.FXML
-    private TableView securityReportsTableView;
+    private TableView<SecurityReport> securityReportsTableView;
     @javafx.fxml.FXML
     private DatePicker toDateDP;
     @javafx.fxml.FXML
     private DatePicker fromDateDP;
     @javafx.fxml.FXML
-    private TableColumn generatedDateTC;
+    private TableColumn<SecurityReport,String> generatedDateTC;
     @javafx.fxml.FXML
-    private TableColumn reportyPeriodTC;
+    private TableColumn<SecurityReport,String> reportyPeriodTC;
     @javafx.fxml.FXML
-    private TableColumn totalIncidentsTC;
+    private TableColumn<SecurityReport,String> totalIncidentsTC;
     @javafx.fxml.FXML
-    private ComboBox reportTypeCB;
+    private ComboBox<String>reportTypeCB;
     @javafx.fxml.FXML
-    private TableColumn reportTypeTC;
+    private TableColumn<SecurityReport,String> reportTypeTC;
     @javafx.fxml.FXML
     private Label securityReportsLabel;
 

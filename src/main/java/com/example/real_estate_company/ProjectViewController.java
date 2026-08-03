@@ -1,5 +1,6 @@
 package com.example.real_estate_company;
 
+import Tanha.ProjectInformation;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 
@@ -8,19 +9,19 @@ public class ProjectViewController
     @javafx.fxml.FXML
     private Label projectInformationLabel;
     @javafx.fxml.FXML
-    private TableColumn publishByTC;
+    private TableColumn<ProjectInformation,String> publishByTC;
     @javafx.fxml.FXML
-    private TableColumn projectIdTC;
+    private TableColumn <ProjectInformation,String>projectIdTC;
     @javafx.fxml.FXML
-    private TableColumn projectNameTC;
+    private TableColumn<ProjectInformation,String> projectNameTC;
     @javafx.fxml.FXML
-    private TableColumn statusTC;
+    private TableColumn<ProjectInformation,String> statusTC;
     @javafx.fxml.FXML
-    private TableColumn lastUpdatedTC;
+    private TableColumn<ProjectInformation,String> lastUpdatedTC;
     @javafx.fxml.FXML
     private TextArea imageViewTA;
     @javafx.fxml.FXML
-    private TableView projectInformationTableView;
+    private TableView<ProjectInformation> projectInformationTableView;
     @javafx.fxml.FXML
     private TextField projectNameTF;
     @javafx.fxml.FXML

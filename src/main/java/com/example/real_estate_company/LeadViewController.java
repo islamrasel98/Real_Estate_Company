@@ -1,5 +1,7 @@
 package com.example.real_estate_company;
 
+import Tanha.CustomerLead;
+import Tanha.Promotion;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 
@@ -8,25 +10,25 @@ public class LeadViewController
     @javafx.fxml.FXML
     private TextField phoneTF;
     @javafx.fxml.FXML
-    private ComboBox leadStatusCB;
+    private ComboBox <String>leadStatusCB;
     @javafx.fxml.FXML
-    private TableColumn assignedStaffTC;
+    private TableColumn<Promotion,String> assignedStaffTC;
     @javafx.fxml.FXML
-    private TableColumn customerNameTC;
+    private TableColumn<Promotion,String> customerNameTC;
     @javafx.fxml.FXML
     private TextField customerNameTF;
     @javafx.fxml.FXML
-    private TableView customerLeadsTableView;
+    private TableView<Promotion> customerLeadsTableView;
     @javafx.fxml.FXML
     private Label customerLeadsLabel;
     @javafx.fxml.FXML
-    private TableColumn leadStatusTC;
+    private TableColumn<Promotion,String> leadStatusTC;
     @javafx.fxml.FXML
     private TextField emailTF;
     @javafx.fxml.FXML
     private TextArea noteTA;
     @javafx.fxml.FXML
-    private TableColumn followUPDateTC;
+    private TableColumn<Promotion,String> followUPDateTC;
     @javafx.fxml.FXML
     private DatePicker followupDateDP;
 

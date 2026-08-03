@@ -8,7 +8,7 @@ import javafx.scene.control.TextField;
 public class LoginViewController
 {
     @javafx.fxml.FXML
-    private ComboBox userRoleComboBox;
+    private ComboBox<String> userRoleComboBox;
     @javafx.fxml.FXML
     private TextField userNameTF;
     @javafx.fxml.FXML

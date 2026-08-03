@@ -1,5 +1,6 @@
 package com.example.real_estate_company;
 
+import Tanha.AccessControl;
 import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -11,23 +12,23 @@ public class AccessControlViewController
     @javafx.fxml.FXML
     private Label accessControllabel;
     @javafx.fxml.FXML
-    private ComboBox securityZoneCB;
+    private ComboBox<String> securityZoneCB;
     @javafx.fxml.FXML
-    private ComboBox PermissionCB;
+    private ComboBox<String> PermissionCB;
     @javafx.fxml.FXML
-    private ComboBox deviceCB;
+    private ComboBox<String>deviceCB;
     @javafx.fxml.FXML
-    private TableView accessControlTableView;
+    private TableView<AccessControl> accessControlTableView;
     @javafx.fxml.FXML
-    private TableColumn securityZoneTC;
+    private TableColumn<AccessControl,String> securityZoneTC;
     @javafx.fxml.FXML
-    private TableColumn deciveStatusTC;
+    private TableColumn<AccessControl,String> deciveStatusTC;
     @javafx.fxml.FXML
-    private TableColumn accessPermissionTC;
+    private TableColumn <AccessControl,String>accessPermissionTC;
     @javafx.fxml.FXML
-    private TableColumn deviceNameTC;
+    private TableColumn<AccessControl,String> deviceNameTC;
     @javafx.fxml.FXML
-    private TableColumn deviceIdTC;
+    private TableColumn<AccessControl,String> deviceIdTC;
 
     @javafx.fxml.FXML
     public void initialize() {

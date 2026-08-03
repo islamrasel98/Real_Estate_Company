@@ -1,5 +1,6 @@
 package com.example.real_estate_company;
 
+import Tanha.CCTVMonitoring;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
@@ -7,17 +8,17 @@ import javafx.scene.image.ImageView;
 public class CCTVViewController
 {
     @javafx.fxml.FXML
-    private ComboBox cameraCB;
+    private ComboBox<String>cameraCB;
     @javafx.fxml.FXML
-    private ComboBox locationCB;
+    private ComboBox<String> locationCB;
     @javafx.fxml.FXML
-    private TableColumn locationTC;
+    private TableColumn<CCTVMonitoring,String> locationTC;
     @javafx.fxml.FXML
-    private TableColumn cameraIdTC;
+    private TableColumn<CCTVMonitoring,String> cameraIdTC;
     @javafx.fxml.FXML
-    private TableColumn lastCheckedTC;
+    private TableColumn<CCTVMonitoring,String> lastCheckedTC;
     @javafx.fxml.FXML
-    private TableColumn cameraStatusTC;
+    private TableColumn<CCTVMonitoring,String> cameraStatusTC;
     @javafx.fxml.FXML
     private Label cctvViewLabel;
     @javafx.fxml.FXML
@@ -25,9 +26,9 @@ public class CCTVViewController
     @javafx.fxml.FXML
     private TextArea alertsTA;
     @javafx.fxml.FXML
-    private TableView CCTVViewTV;
+    private TableView<CCTVMonitoring> CCTVViewTV;
     @javafx.fxml.FXML
-    private TableColumn alertsTC;
+    private TableColumn<CCTVMonitoring,String> alertsTC;
 
     @javafx.fxml.FXML
     public void initialize() {
