@@ -34,6 +34,7 @@ public class LeadViewController
 
     @javafx.fxml.FXML
     public void initialize() {
+        leadStatusCB.getItems().addAll("New", "Contacted", "Qualified", "Converted");
     }
 
     @javafx.fxml.FXML

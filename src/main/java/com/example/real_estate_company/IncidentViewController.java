@@ -27,9 +27,14 @@ public class IncidentViewController
     private TableColumn<SecurityIncident,String> incidentTypeTC;
     @javafx.fxml.FXML
     private TextArea descriptionTA;
+    @javafx.fxml.FXML
+    private ComboBox<String> evidenceStatusCB;
 
     @javafx.fxml.FXML
     public void initialize() {
+        incidentTypeCB.getItems().addAll("Fire", "Theft", "Unauthorized Access", "Other");
+        evidenceStatusCB.getItems().addAll( "Open", "Resolved", "Closed");
+
     }
 
     @javafx.fxml.FXML

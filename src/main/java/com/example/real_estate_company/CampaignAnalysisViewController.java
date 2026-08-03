@@ -25,6 +25,7 @@ public class CampaignAnalysisViewController
 
     @javafx.fxml.FXML
     public void initialize() {
+        campaignCB.getItems().addAll("Summer Sale", "Apartment Expo", "Facebook Campaign");
     }
 
     @javafx.fxml.FXML

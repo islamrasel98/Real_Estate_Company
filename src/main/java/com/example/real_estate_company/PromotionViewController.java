@@ -24,9 +24,12 @@ public class PromotionViewController
     private TableColumn<Promotion,String> endDateTC;
     @javafx.fxml.FXML
     private TableView<Promotion> promotionandDiscountTableView;
+    @javafx.fxml.FXML
+    private ComboBox<String> statusComboBox;
 
     @javafx.fxml.FXML
     public void initialize() {
+        statusComboBox.getItems().addAll("Active","Inactive","Expired");
     }
 
     @Deprecated

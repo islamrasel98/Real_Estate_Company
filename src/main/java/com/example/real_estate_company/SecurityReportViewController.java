@@ -27,6 +27,7 @@ public class SecurityReportViewController
 
     @javafx.fxml.FXML
     public void initialize() {
+        reportTypeCB.getItems().addAll( "Daily", "Weekly", "Monthly", "Annual");
     }
 
     @javafx.fxml.FXML

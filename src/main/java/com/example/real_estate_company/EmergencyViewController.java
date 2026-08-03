@@ -36,6 +36,9 @@ public class EmergencyViewController
 
     @javafx.fxml.FXML
     public void initialize() {
+        emergencyTypeCB.getItems().addAll( "Fire", "Medical", "Security", "Natural Disaster");
+        severityCB.getItems().addAll("Pending", "In Progress", "Completed");
+        responseTeamCB.getItems().addAll( "Fire Team", "Medical Team", "Security Team");
     }
 
     @javafx.fxml.FXML

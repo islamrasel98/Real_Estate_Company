@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -14,14 +15,11 @@
    <children>
       <Label fx:id="projectInformationLabel" layoutX="247.0" layoutY="21.0" text="Project Information" />
       <TextField fx:id="projectNameTF" layoutX="115.0" layoutY="65.0" />
-      <TextArea fx:id="descriptionTA" layoutX="99.0" layoutY="110.0" prefHeight="200.0" prefWidth="200.0" />
-      <Button layoutX="486.0" layoutY="400.0" mnemonicParsing="false" onAction="#uploadVideoButtonOA" text="Upload Video" />
-      <Button layoutX="353.0" layoutY="400.0" mnemonicParsing="false" onAction="#uploadImagebuttonOA" text="Upload Image" />
+      <TextArea fx:id="descriptionTA" layoutX="363.0" layoutY="135.0" prefHeight="200.0" prefWidth="200.0" />
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="386.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" />
-      <TextArea fx:id="imageViewTA" layoutX="386.0" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" />
-      <Button layoutX="41.0" layoutY="357.0" mnemonicParsing="false" onAction="#saveButtonOA" text="Save" />
-      <Button layoutX="237.0" layoutY="357.0" mnemonicParsing="false" onAction="#publishButtonOA" text="Publish" />
-      <TableView fx:id="projectInformationTableView" layoutX="13.0" layoutY="435.0" prefHeight="200.0" prefWidth="591.0">
+      <Button layoutX="41.0" layoutY="235.0" mnemonicParsing="false" onAction="#saveButtonOA" text="Save" />
+      <Button layoutX="39.0" layoutY="180.0" mnemonicParsing="false" onAction="#publishButtonOA" text="Publish" />
+      <TableView fx:id="projectInformationTableView" layoutX="9.0" layoutY="345.0" prefHeight="200.0" prefWidth="591.0">
         <columns>
           <TableColumn fx:id="projectIdTC" prefWidth="104.80002021789551" text="Project ID" />
           <TableColumn fx:id="projectNameTC" prefWidth="121.60002899169922" text="Project Name" />
@@ -31,7 +29,10 @@
         </columns>
       </TableView>
       <Text layoutX="22.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Project Name:" />
-      <Text layoutX="22.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description:" />
-      <Text layoutX="306.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Image View:" />
+      <Text layoutX="284.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description:" />
+      <ComboBox fx:id="statusComboBox" layoutX="436.0" layoutY="65.0" prefWidth="150.0" />
+      <Text layoutX="373.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status:" />
+      <TextField fx:id="projectIdTF" layoutX="115.0" layoutY="105.0" />
+      <Text layoutX="33.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Project ID:" />
    </children>
 </AnchorPane>

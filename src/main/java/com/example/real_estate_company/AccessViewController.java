@@ -24,12 +24,17 @@ public class AccessViewController
     private TableColumn <AccessVerification,String>accessAreaTC;
     @javafx.fxml.FXML
     private Label accessVerificationLabel;
+    @javafx.fxml.FXML
+    private ComboBox<String> verificationStatusCB1;
 
     @javafx.fxml.FXML
     public void initialize() {
+        accessAreaCB.getItems().addAll("Main Gate", "Office", "Parking", "Restricted Area");
+        verificationStatusCB1.getItems().addAll("Granted", "Denied");
+
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void verificationStatusButtonOA(ActionEvent actionEvent) {
     }
 

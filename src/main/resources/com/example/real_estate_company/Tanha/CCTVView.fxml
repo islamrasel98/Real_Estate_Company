@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_estate_company.CCTVViewController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_estate_company.CCTVViewController">
    <children>
       <Label fx:id="cctvViewLabel" layoutX="239.0" layoutY="29.0" text="CCTV View" />
-      <ComboBox fx:id="cameraCB" layoutX="58.0" layoutY="67.0" prefWidth="150.0" />
+      <ComboBox fx:id="cameraCB" layoutX="63.0" layoutY="66.0" prefWidth="150.0" />
       <ComboBox fx:id="locationCB" layoutX="83.0" layoutY="117.0" prefWidth="150.0" />
       <ImageView fx:id="videoDisplayImageView" fitHeight="150.0" fitWidth="200.0" layoutX="385.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true" />
       <TextArea fx:id="alertsTA" layoutX="58.0" layoutY="159.0" prefHeight="200.0" prefWidth="200.0" />

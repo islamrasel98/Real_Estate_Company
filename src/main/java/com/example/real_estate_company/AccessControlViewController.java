@@ -32,6 +32,9 @@ public class AccessControlViewController
 
     @javafx.fxml.FXML
     public void initialize() {
+        securityZoneCB.getItems().addAll( "Zone A", "Zone B", "Zone C");
+        PermissionCB.getItems().addAll("Read", "Write", "Full Access");
+        deviceCB.getItems().addAll("Enabled","Disabled");
     }
 
     @javafx.fxml.FXML

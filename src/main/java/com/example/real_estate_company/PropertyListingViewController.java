@@ -33,6 +33,7 @@ public class PropertyListingViewController
 
     @javafx.fxml.FXML
     public void initialize() {
+        propertyCB.getItems().addAll("Apartment", "Villa", "Office", "Land");
     }
 
     @Deprecated

@@ -19,23 +19,26 @@ public class ProjectViewController
     @javafx.fxml.FXML
     private TableColumn<ProjectInformation,String> lastUpdatedTC;
     @javafx.fxml.FXML
-    private TextArea imageViewTA;
-    @javafx.fxml.FXML
     private TableView<ProjectInformation> projectInformationTableView;
     @javafx.fxml.FXML
     private TextField projectNameTF;
     @javafx.fxml.FXML
     private TextArea descriptionTA;
+    @javafx.fxml.FXML
+    private TextField projectIdTF;
+    @javafx.fxml.FXML
+    private ComboBox<String> statusComboBox;
 
     @javafx.fxml.FXML
     public void initialize() {
+        statusComboBox.getItems().addAll("Draft", "Published", "Archived");
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void uploadVideoButtonOA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void uploadImagebuttonOA(ActionEvent actionEvent) {
     }
 

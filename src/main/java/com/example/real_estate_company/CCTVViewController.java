@@ -32,6 +32,8 @@ public class CCTVViewController
 
     @javafx.fxml.FXML
     public void initialize() {
+        cameraCB.getItems().addAll("Online", "Offline");
+        locationCB.getItems().addAll( "Gate", "Lobby", "Parking", "Reception");
     }
 
     @javafx.fxml.FXML

@@ -18,6 +18,7 @@ public class LoginViewController
 
     @javafx.fxml.FXML
     public void initialize() {
+        userRoleComboBox.getItems().addAll("Marketing Officer", "Security Officer");
     }
 
     @javafx.fxml.FXML

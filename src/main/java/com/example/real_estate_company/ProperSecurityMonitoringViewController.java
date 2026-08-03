@@ -15,22 +15,22 @@ public class ProperSecurityMonitoringViewController
     @javafx.fxml.FXML
     private TableColumn <PropertySecurity,String>alarmStatusTC;
     @javafx.fxml.FXML
-    private ComboBox<String> propertyCB;
-    @javafx.fxml.FXML
     private TableColumn<PropertySecurity,String> cctvStatusTC;
     @javafx.fxml.FXML
-    private TextField cctvStatusTF;
-    @javafx.fxml.FXML
     private Label propertySecurityMonitoringLabel;
-    @javafx.fxml.FXML
-    private TextField alarmStatusTF;
     @javafx.fxml.FXML
     private TextArea incidentAlertTA;
     @javafx.fxml.FXML
     private Button saveButtonOA;
+    @javafx.fxml.FXML
+    private ComboBox<String> alarmStatusCB;
+    @javafx.fxml.FXML
+    private ComboBox<String> cctvStatusCB;
 
     @javafx.fxml.FXML
     public void initialize() {
+        alarmStatusCB.getItems().addAll("Active","Inactive");
+        cctvStatusCB.getItems().addAll( "Working", "Offline","Maintenance");
     }
 
     @javafx.fxml.FXML

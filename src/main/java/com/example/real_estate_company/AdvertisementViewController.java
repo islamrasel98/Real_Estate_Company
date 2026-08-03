@@ -43,6 +43,11 @@ public class AdvertisementViewController
 
     @javafx.fxml.FXML
     public void initialize() {
+        propertyCB.getItems().addAll("Apartment", "Commercial Space", "Office", "Land");
+        statusComboBox.getItems().addAll("Pending", "Published", "Rejected");
+        publicationChannelCB.getItems().addAll("Website", "Facebook", "Instagram", "LinkedIn");
+        propertyNameCB.getItems().addAll("Apartment", "Villa", "Office", "Commercial Space", "Land");
+        statusCB.getItems().addAll("Pending", "Published", "Rejected");
     }
 
     @Deprecated

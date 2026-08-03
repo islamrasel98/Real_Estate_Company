@@ -32,6 +32,7 @@ public class CampaignViewController
 
     @javafx.fxml.FXML
     public void initialize() {
+        channelCB.getItems().addAll("Facebook", "Website", "Instagram","Email");
     }
 
     @javafx.fxml.FXML
