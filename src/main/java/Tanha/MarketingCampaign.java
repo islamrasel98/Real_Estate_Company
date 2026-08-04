@@ -3,16 +3,14 @@ package Tanha;
 public class MarketingCampaign {
     private String campaignId;
     private String campaignName;
-    private String targetAudience;
     private float budget;
     private String startDate;
     private String endDate;
     private String channel;
 
-    public MarketingCampaign(String campaignId, String campaignName, String targetAudience, float budget, String startDate, String endDate, String channel) {
+    public MarketingCampaign(String campaignId, String campaignName,float budget, String startDate, String endDate, String channel) {
         this.campaignId = campaignId;
         this.campaignName = campaignName;
-        this.targetAudience = targetAudience;
         this.budget = budget;
         this.startDate = startDate;
         this.endDate = endDate;
@@ -34,14 +32,6 @@ public class MarketingCampaign {
 
     public void setCampaignName(String campaignName) {
         this.campaignName = campaignName;
-    }
-
-    public String getTargetAudience() {
-        return targetAudience;
-    }
-
-    public void setTargetAudience(String targetAudience) {
-        this.targetAudience = targetAudience;
     }
 
     public float getBudget() {
@@ -81,7 +71,6 @@ public class MarketingCampaign {
         return "MarketingCampaign{" +
                 "campaignId='" + campaignId + '\'' +
                 ", campaignName='" + campaignName + '\'' +
-                ", targetAudience='" + targetAudience + '\'' +
                 ", budget=" + budget +
                 ", startDate='" + startDate + '\'' +
                 ", endDate='" + endDate + '\'' +

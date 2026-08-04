@@ -4,6 +4,9 @@ import Tanha.AccessVerification;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class AccessViewController
 {
     @javafx.fxml.FXML
@@ -36,9 +39,47 @@ public class AccessViewController
 
     @Deprecated
     public void verificationStatusButtonOA(ActionEvent actionEvent) {
+
     }
 
     @javafx.fxml.FXML
     public void verifyButtonOA(ActionEvent actionEvent) {
+        AccessVerification selectedItem = accessViewTableView.getSelectionModel().getSelectedItem();
+
+        if (selectedItem == null) {
+            showAlert("Error", "Please select an access record to update status.", Alert.AlertType.WARNING);
+            return;
+        }
+        String newStatus = verificationStatusCB1.getValue();
+
+        if (newStatus == null) {
+            showAlert("Error", "Please select a verification status.", Alert.AlertType.ERROR);
+            return;
+        }
+
+        try {
+            selectedItem.setVerificationStatus(newStatus);
+            selectedItem.setLastUpdated(getCurrentTimestamp());
+            accessViewTableView.refresh();
+
+            showAlert("Success", "Verification status updated to: " + newStatus +
+                            " for Access ID: " + selectedItem.getAccessId(),
+                    Alert.AlertType.INFORMATION);
+
+        } catch (Exception e) {
+            showAlert("Error", "Failed to update status: " + e.getMessage(), Alert.AlertType.ERROR);
+        }
+    }
+    private void showAlert(String title, String message, Alert.AlertType alertType) {
+        Alert alert = new Alert(alertType);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
+    private String getCurrentTimestamp() {
+        LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        return now.format(formatter);
     }
 }

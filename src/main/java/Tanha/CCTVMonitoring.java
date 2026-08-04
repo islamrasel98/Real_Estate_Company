@@ -1,21 +1,26 @@
 package Tanha;
 
+import javafx.beans.value.ObservableValue;
+import javafx.scene.control.TableColumn;
+import javafx.util.Callback;
+
 public class CCTVMonitoring {
 
     private String cameraId;
     private String location;
-    private String cameraStatus;
     private String alert;
     private String lastChecked;
 
     public CCTVMonitoring(String cameraId, String location, String cameraStatus, String alert, String lastChecked) {
         this.cameraId = cameraId;
         this.location = location;
-        this.cameraStatus = cameraStatus;
         this.alert = alert;
         this.lastChecked = lastChecked;
 
 
+    }
+
+    public CCTVMonitoring(String text, String value, String alert, Callback<TableColumn.CellDataFeatures<CCTVMonitoring, String>, ObservableValue<String>> cellValueFactory) {
     }
 
     public String getCameraId() {
@@ -32,14 +37,6 @@ public class CCTVMonitoring {
 
     public void setLocation(String location) {
         this.location = location;
-    }
-
-    public String getCameraStatus() {
-        return cameraStatus;
-    }
-
-    public void setCameraStatus(String cameraStatus) {
-        this.cameraStatus = cameraStatus;
     }
 
     public String getAlert() {
@@ -63,7 +60,6 @@ public class CCTVMonitoring {
         return "CCTVMonitoring{" +
                 "cameraId='" + cameraId + '\'' +
                 ", location='" + location + '\'' +
-                ", cameraStatus='" + cameraStatus + '\'' +
                 ", alert='" + alert + '\'' +
                 ", lastChecked='" + lastChecked + '\'' +
                 '}';

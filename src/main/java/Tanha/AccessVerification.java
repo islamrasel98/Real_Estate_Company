@@ -66,4 +66,14 @@ public class AccessVerification {
                 ", accessStatus='" + accessStatus + '\'' +
                 '}';
     }
+
+    public void setVerificationStatus(String newStatus) {
+    }
+
+    public void setLastUpdated(String currentTimestamp) {
+    }
+
+    public String getAccessId() {
+        return "";
+    }
 }

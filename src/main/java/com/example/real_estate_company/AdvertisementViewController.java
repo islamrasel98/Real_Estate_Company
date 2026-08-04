@@ -1,8 +1,13 @@
 package com.example.real_estate_company;
 
 import Tanha.Advertisement;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class AdvertisementViewController
 {
@@ -40,6 +45,8 @@ public class AdvertisementViewController
     private ComboBox<String> publicationChannelCB;
     @javafx.fxml.FXML
     private Label successorerrormessageLabel;
+    ArrayList<Advertisement> advertisementList = new ArrayList<>();
+
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -52,18 +59,36 @@ public class AdvertisementViewController
 
     @Deprecated
     public void cancelButtonOA(ActionEvent actionEvent) {
-    }
+        clearFields();
 
-    @Deprecated
-    public void uploadImageButtonOA(ActionEvent actionEvent) {
+        successorerrormessageLabel.setText("Operation Cancelled.");
+
     }
 
     @Deprecated
     public void publishButtonOA(ActionEvent actionEvent) {
+        Advertisement advertisement =
+                propertyAdvertisementTableView.getSelectionModel().getSelectedItem();
+
+        if(advertisement == null){
+
+            successorerrormessageLabel.setText("Select an advertisement.");
+
+            return;
+        }
+
+        advertisement.setStatus("Published");
+
+        propertyAdvertisementTableView.refresh();
+
+        successorerrormessageLabel.setText("Advertisement Published.");
+
     }
 
     @Deprecated
     public void saveButtonOA(ActionEvent actionEvent) {
+        successorerrormessageLabel.setText("Advertisement Saved.");
+
     }
 
     @javafx.fxml.FXML
@@ -72,13 +97,85 @@ public class AdvertisementViewController
 
     @javafx.fxml.FXML
     public void clearButtonOA(ActionEvent actionEvent) {
+        clearFields();
+
+        propertyAdvertisementTableView.getItems().clear();
+
+        successorerrormessageLabel.setText("Cleared.");
     }
 
     @javafx.fxml.FXML
     public void searchAdvertisementButtonOA(ActionEvent actionEvent) {
+        ObservableList<Advertisement> filteredList =
+                FXCollections.observableArrayList();
+
+        for(Advertisement a : advertisementList){
+
+            if(a.getPropertyName().equals(propertyNameCB.getValue())
+                    &&
+                    a.getStatus().equals(statusComboBox.getValue())){
+
+                filteredList.add(a);
+
+            }
+
+        }
+
+        propertyAdvertisementTableView.setItems(filteredList);
     }
 
     @javafx.fxml.FXML
     public void addAdvertisementButtonOA(ActionEvent actionEvent) {
+
+            float budget;
+
+            try {
+                budget = Float.parseFloat(budgetTF.getText());
+            }
+            catch(NumberFormatException e){
+
+                successorerrormessageLabel.setText("Budget must be numeric.");
+                return;
+            }
+
+            for(Advertisement a : advertisementList){
+
+                if(a.getAdvertisementTitle().equalsIgnoreCase(advertisementTitleTF.getText())){
+
+                    successorerrormessageLabel.setText("Advertisement title already exists.");
+                    return;
+                }
+
+            }
+
+
+            Advertisement advertisement = new Advertisement(
+
+                    advertisementIdTF.getText(),
+                    advertisementTitleTF.getText(),
+                    propertyNameCB.getValue(),
+                    budget,
+                    publicationDateDP.getValue().toString(),
+                    publicationChannelCB.getValue(),
+                    statusComboBox.getValue()
+            );
+
+
+            advertisementList.add(advertisement);
+
+            successorerrormessageLabel.setText("Advertisement Added Successfully.");
+
+            clearFields();
+
+        }
+    private void clearFields() {
+        advertisementIdTF.clear();
+        advertisementTitleTF.clear();
+        budgetTF.clear();
+        publicationDateDP.setValue(null);
+        propertyNameCB.setValue(null);
+        publicationChannelCB.setValue(null);
+        statusComboBox.setValue(null);
+        successorerrormessageLabel.setText("");
     }
 }

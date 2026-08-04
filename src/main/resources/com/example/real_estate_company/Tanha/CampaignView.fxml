@@ -18,7 +18,7 @@
       <DatePicker fx:id="endDateDP" layoutX="394.0" layoutY="108.0" />
       <Button layoutX="40.0" layoutY="220.0" mnemonicParsing="false" onAction="#addCampaignButtonOA" text="Add Campaign" />
       <Button layoutX="438.0" layoutY="220.0" mnemonicParsing="false" onAction="#SearchCampaignButtonOA" text="Search Campaign" />
-      <TableView layoutX="1.0" layoutY="330.0" onSort="#campaignDashBoardTableView" prefHeight="200.0" prefWidth="600.0">
+      <TableView fx:id="campaignDashBoardTableView" layoutX="1.0" layoutY="330.0" prefHeight="200.0" prefWidth="600.0">
         <columns>
           <TableColumn fx:id="campaignIdTC" prefWidth="105.60003972053528" text="Campaign ID" />
           <TableColumn fx:id="campaignNameTC" prefWidth="116.7999267578125" text="Campaign Name" />

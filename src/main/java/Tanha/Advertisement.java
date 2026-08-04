@@ -1,19 +1,19 @@
 package Tanha;
 
-public class Advertisement { private String advertisementId;
+
+public class Advertisement {
+    private String advertisementId;
     private String advertisementTitle;
     private String propertyName;
-    private String description;
     private float budget;
     private String publicationDate;
     private String publicationChannel;
     private String status;
 
-    public Advertisement(String advertisementId, String advertisementTitle, String propertyName, String description, float budget, String publicationDate, String publicationChannel, String status) {
+    public Advertisement(String advertisementId, String advertisementTitle, String propertyName, float budget, String publicationDate, String publicationChannel, String status) {
         this.advertisementId = advertisementId;
         this.advertisementTitle = advertisementTitle;
         this.propertyName = propertyName;
-        this.description = description;
         this.budget = budget;
         this.publicationDate = publicationDate;
         this.publicationChannel = publicationChannel;
@@ -42,14 +42,6 @@ public class Advertisement { private String advertisementId;
 
     public void setPropertyName(String propertyName) {
         this.propertyName = propertyName;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public float getBudget() {
@@ -90,7 +82,6 @@ public class Advertisement { private String advertisementId;
                 "advertisementId='" + advertisementId + '\'' +
                 ", advertisementTitle='" + advertisementTitle + '\'' +
                 ", propertyName='" + propertyName + '\'' +
-                ", description='" + description + '\'' +
                 ", budget=" + budget +
                 ", publicationDate='" + publicationDate + '\'' +
                 ", publicationChannel='" + publicationChannel + '\'' +
