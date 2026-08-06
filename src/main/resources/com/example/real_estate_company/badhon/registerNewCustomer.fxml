@@ -6,19 +6,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="496.0" prefWidth="693.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_estate_company.badhon.registerNewCustomerController">
    <children>
       <Text layoutX="47.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
-      <TextField layoutX="119.0" layoutY="45.0" />
+      <TextField fx:id="nameTextField" layoutX="119.0" layoutY="45.0" />
       <Text layoutX="22.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number" />
-      <TextField layoutX="119.0" layoutY="90.0" />
+      <TextField fx:id="phoneNumberTextField" layoutX="119.0" layoutY="90.0" />
       <Text layoutX="56.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email " />
-      <TextField layoutX="119.0" layoutY="136.0" />
+      <TextField fx:id="emailTextField" layoutX="119.0" layoutY="136.0" />
       <Text layoutX="36.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="propertyType" />
-      <ComboBox layoutX="125.0" layoutY="186.0" prefWidth="150.0" />
+      <ComboBox fx:id="propertyTypeComboBox" layoutX="125.0" layoutY="186.0" prefWidth="150.0" />
       <Text layoutX="63.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="budget" />
-      <TextField layoutX="126.0" layoutY="235.0" />
-      <Button layoutX="119.0" layoutY="305.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="162.0" text="Save Inquiry" />
+      <TextField fx:id="budgetTextField" layoutX="126.0" layoutY="235.0" />
+      <Button layoutX="119.0" layoutY="305.0" mnemonicParsing="false" onAction="#saveInquiryOnAction" prefHeight="50.0" prefWidth="162.0" text="Save Inquiry" />
    </children>
 </AnchorPane>
