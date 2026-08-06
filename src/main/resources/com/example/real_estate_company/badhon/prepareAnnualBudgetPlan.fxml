@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.real_estate_company.badhon.prepareAnnualBudgetPlanController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="496.0" prefWidth="667.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_estate_company.badhon.prepareAnnualBudgetPlanController">
+   <children>
+      <DatePicker fx:id="budgetYearDatePicker" layoutX="121.0" layoutY="27.0" />
+      <Text layoutX="10.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Budget Year Spinner" />
+      <Text layoutX="10.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Project Name" />
+      <TextField fx:id="projectNameTextField" layoutX="115.0" layoutY="94.0" />
+      <Text layoutX="318.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Construction Budget" />
+      <TextField fx:id="officeBudgetTextField" layoutX="123.0" layoutY="184.0" />
+      <Text layoutX="25.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Office Budget" />
+      <TextField fx:id="marketingBudgetTextField" layoutX="132.0" layoutY="142.0" />
+      <Text layoutX="10.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Marketing Budget" />
+      <TextField fx:id="constructionBudgetTextField" layoutX="469.0" layoutY="150.0" />
+      <Text layoutX="325.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Salary Budget" />
+      <TextField fx:id="salaryBudgetTextField" layoutX="443.0" layoutY="100.0" />
+      <Button layoutX="287.0" layoutY="392.0" mnemonicParsing="false" onAction="#reviewAndConfirmBudgetPlanOnAction" prefHeight="47.0" prefWidth="190.0" text="Review and Confirm Budget Plan" />
+      <TextField fx:id="maintenanceBudgetTextField" layoutX="445.0" layoutY="197.0" />
+      <Text layoutX="306.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maintenance Budget" />
+      <Label layoutX="68.0" layoutY="416.0" />
+      <Button layoutX="94.0" layoutY="274.0" mnemonicParsing="false" onAction="#createAnnualBudgetPlanOnAction" prefHeight="47.0" prefWidth="190.0" text="Create Annual Budget Plan" />
+   </children>
 </AnchorPane>
