@@ -5,17 +5,15 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="458.0" prefWidth="644.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_estate_company.badhon.monitorProfitAndLossSummariesController">
    <children>
       <Label layoutX="14.0" layoutY="56.0" text="Choice period" />
-      <DatePicker layoutX="14.0" layoutY="80.0" prefHeight="26.0" prefWidth="154.0" />
+      <DatePicker fx:id="choicePeriodDatePicker" layoutX="14.0" layoutY="80.0" prefHeight="26.0" prefWidth="154.0" />
       <Label layoutX="192.0" layoutY="55.0" text="Start Date" />
-      <DatePicker layoutX="192.0" layoutY="79.0" prefHeight="26.0" prefWidth="154.0" />
+      <DatePicker fx:id="startDateDatePicker" layoutX="192.0" layoutY="79.0" prefHeight="26.0" prefWidth="154.0" />
       <Label layoutX="385.0" layoutY="54.0" text="End Date" />
-      <DatePicker layoutX="385.0" layoutY="78.0" prefHeight="26.0" prefWidth="154.0" />
-      <Button layoutX="63.0" layoutY="142.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="122.0" text="Generate Report" />
-      <Label layoutX="26.0" layoutY="195.0" text="Report Output" />
-      <Label layoutX="26.0" layoutY="221.0" prefHeight="166.0" prefWidth="508.0" text="Label" />
+      <DatePicker fx:id="endDateDatePicker" layoutX="385.0" layoutY="78.0" prefHeight="26.0" prefWidth="154.0" />
+      <Button layoutX="63.0" layoutY="142.0" mnemonicParsing="false" onAction="#generateReportOnAction" prefHeight="39.0" prefWidth="122.0" text="Generate Report" />
+      <Label fx:id="reportOutputLabel" layoutX="26.0" layoutY="221.0" prefHeight="166.0" prefWidth="508.0" text="Report Output" />
    </children>
 </AnchorPane>
