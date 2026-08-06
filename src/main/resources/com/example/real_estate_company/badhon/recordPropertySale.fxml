@@ -10,42 +10,40 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="616.0" prefWidth="863.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_estate_company.badhon.recordPropertySaleController">
    <children>
-      <TextField layoutX="497.0" layoutY="58.0" text="Enter id" />
-      <Text layoutX="380.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer SearchField" />
+      <TextField fx:id="customerSearchTextField" layoutX="497.0" layoutY="58.0" />
+      <Text layoutX="380.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer ID" />
       <Text layoutX="380.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sale Date" />
-      <DatePicker layoutX="447.0" layoutY="98.0" prefHeight="26.0" prefWidth="139.0" />
-      <Text layoutX="603.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="agreedPriceField" />
-      <TextField layoutX="704.0" layoutY="98.0" prefHeight="26.0" prefWidth="131.0" />
-      <Button layoutX="704.0" layoutY="49.0" mnemonicParsing="false" text="Search" />
+      <DatePicker fx:id="saleDateDatePicker" layoutX="447.0" layoutY="98.0" prefHeight="26.0" prefWidth="139.0" />
+      <Text layoutX="603.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agreed Price" />
+      <TextField fx:id="agreedPriceTextField" layoutX="704.0" layoutY="98.0" prefHeight="26.0" prefWidth="131.0" />
+      <Button layoutX="704.0" layoutY="49.0" mnemonicParsing="false" onAction="#customerIdSearchOnAction" text="Customer IDSearch" />
       <Text layoutX="377.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Booking Amounte" />
-      <TextField layoutX="480.0" layoutY="147.0" prefHeight="26.0" prefWidth="131.0" />
-      <ComboBox layoutX="480.0" layoutY="187.0" prefHeight="26.0" prefWidth="131.0" />
+      <TextField fx:id="bookingAmountTextField" layoutX="480.0" layoutY="147.0" prefHeight="26.0" prefWidth="131.0" />
+      <ComboBox fx:id="pymentTypeComboBox" layoutX="480.0" layoutY="187.0" prefHeight="26.0" prefWidth="131.0" />
       <Text layoutX="387.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Type" />
-      <Text layoutX="394.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sale Summary" />
-      <Label layoutX="483.0" layoutY="232.0" prefHeight="78.0" prefWidth="368.0" text="Label" />
-      <Button layoutX="447.0" layoutY="327.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="102.0" text="Confirm Sale" />
-      <TableView layoutX="14.0" layoutY="39.0" prefHeight="261.0" prefWidth="362.0">
+      <Label fx:id="saleSummaryLabel" layoutX="483.0" layoutY="232.0" prefHeight="78.0" prefWidth="368.0" text="Sale Summary" />
+      <Button layoutX="447.0" layoutY="327.0" mnemonicParsing="false" onAction="#comfirmSaleOnAction" prefHeight="42.0" prefWidth="102.0" text="Confirm Sale" />
+      <TableView fx:id="propertyTableView" layoutX="14.0" layoutY="39.0" prefHeight="261.0" prefWidth="362.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="ID" />
-          <TableColumn prefWidth="75.0" text="Project " />
-            <TableColumn prefWidth="75.0" text="Type" />
-            <TableColumn prefWidth="75.0" text="Price" />
-            <TableColumn prefWidth="60.79996337890623" text="Status" />
+          <TableColumn fx:id="idTableColumn" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="projectTableColumn" prefWidth="75.0" text="Project " />
+            <TableColumn fx:id="typeTableColumn" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="priceTableColumn" prefWidth="75.0" text="Price" />
+            <TableColumn fx:id="statusTavleColumn" prefWidth="60.79996337890623" text="Status" />
         </columns>
       </TableView>
       <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Property " />
-      <TableView layoutX="47.0" layoutY="394.0" prefHeight="198.0" prefWidth="574.0">
+      <TableView fx:id="installmentTypeTableView" layoutX="47.0" layoutY="394.0" prefHeight="198.0" prefWidth="574.0">
          <columns>
-            <TableColumn prefWidth="86.39995956420898" text="No:" />
-            <TableColumn prefWidth="128.00001525878906" text="Due Dte" />
-            <TableColumn prefWidth="145.5999755859375" text="Amount" />
-            <TableColumn prefWidth="133.5999755859375" text="Balance" />
-            <TableColumn prefWidth="83.20001220703125" text="Status" />
+            <TableColumn fx:id="noTableColumn" prefWidth="86.39995956420898" text="No:" />
+            <TableColumn fx:id="dueDateTableColumn" prefWidth="128.00001525878906" text="Due Date" />
+            <TableColumn fx:id="amountTableColumn" prefWidth="145.5999755859375" text="Amount" />
+            <TableColumn fx:id="balanceTableColumn" prefWidth="133.5999755859375" text="Balance" />
+            <TableColumn fx:id="statusTableColumn" prefWidth="83.20001220703125" text="Status" />
          </columns>
       </TableView>
-      <Text layoutX="47.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="InstallmentType" />
+      <Text layoutX="47.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Installment Type" />
    </children>
 </AnchorPane>
