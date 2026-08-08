@@ -35,7 +35,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Button layoutX="199.0" layoutY="364.0" mnemonicParsing="false" onAction="#registrationButton" prefHeight="34.0" prefWidth="78.0" text="Register">
+      <Button layoutX="199.0" layoutY="364.0" mnemonicParsing="false" onAction="#registrationButtonOnAction" prefHeight="34.0" prefWidth="78.0" text="Register">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>

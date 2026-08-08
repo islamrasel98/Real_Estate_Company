@@ -77,16 +77,21 @@ public class LoginController {
     }
 
     @javafx.fxml.FXML
-    public void registrationButton(ActionEvent actionEvent) throws IOException {
-
+    public void registrationButtonOnAction(ActionEvent actionEvent) {
         try {
-            FXMLLoader loader = new FXMLLoader(
-                    Objects.requireNonNull(
-                            getClass().getResource("/com/example/real_estate_company/Registration.fxml")));
+            var url = getClass().getResource(
+                    "/com/example/real_estate_company/Registration.fxml"
+            );
 
+            System.out.println("Registration FXML = " + url);
+
+            FXMLLoader loader = new FXMLLoader(url);
             Parent root = loader.load();
 
-            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            Stage stage = (Stage) ((Node) actionEvent.getSource())
+                    .getScene()
+                    .getWindow();
+
             stage.setScene(new Scene(root));
             stage.setTitle("Customer Registration");
             stage.show();
@@ -95,7 +100,6 @@ public class LoginController {
             e.printStackTrace();
         }
     }
-
 }
 
 

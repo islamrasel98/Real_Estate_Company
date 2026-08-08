@@ -2,16 +2,61 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HRDashboardController">
+<AnchorPane prefHeight="646.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HRDashboardController">
    <children>
-      <Label layoutX="205.0" layoutY="64.0" text="Welcome HR Manager">
+      <Label layoutY="-1.0" prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: #C5ECD6;" text="                                         Welcome HR Manager">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="497.0" layoutY="341.0" mnemonicParsing="false" onAction="#LogoutButtonOnAction" prefHeight="34.0" prefWidth="82.0" text="Logout" textFill="#d90e0e" />
+      <Button layoutY="68.0" mnemonicParsing="false" onAction="#manageEmployeesButton" prefHeight="46.0" prefWidth="120.0" style="-fx-background-color: #E8E6C5;" text="Manage Employees" />
+      <Button layoutY="124.0" mnemonicParsing="false" onAction="#recruitEmployeeButton" prefHeight="46.0" prefWidth="120.0" style="-fx-background-color: #E8E6C5;" text="Recruit Employee" />
+      <Button layoutY="182.0" mnemonicParsing="false" onAction="#scheduleInterviewButton" prefHeight="46.0" prefWidth="120.0" style="-fx-background-color: #E8E6C5;" text="Schedule Interview" />
+      <Button layoutY="238.0" mnemonicParsing="false" onAction="#evaluateEmployeeButton" prefHeight="46.0" prefWidth="120.0" style="-fx-background-color: #E8E6C5;" text="Evaluate Employee" />
+      <Button layoutY="300.0" mnemonicParsing="false" onAction="#approveRequestButton" prefHeight="46.0" prefWidth="120.0" style="-fx-background-color: #E8E6C5;" text="Approve Request" />
+      <Button layoutY="600.0" mnemonicParsing="false" onAction="#logoutButton" prefHeight="46.0" prefWidth="95.0" style="-fx-background-color: #E8E6C5;" text="Logout" />
+      <Label layoutX="300.0" layoutY="68.0" style="-fx-background-color: #E8E6C5;" text="HR Manager Information">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="managerIdLabel" layoutX="177.0" layoutY="104.0" text="Manager ID :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="managerNameLabel" layoutX="172.0" layoutY="155.0" text="Name       :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="managerEmailLabel" layoutX="176.0" layoutY="205.0" text="Email      :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="departmentLabel" layoutX="176.0" layoutY="252.0" text="Department :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="recentActivitiesTable" layoutX="7.0" layoutY="364.0" prefHeight="229.0" prefWidth="584.0">
+        <columns>
+          <TableColumn fx:id="employeeColumn" prefWidth="159.2000093460083" text="Employee " />
+          <TableColumn fx:id="activityColumn" prefWidth="166.40003967285156" text="Activity" />
+            <TableColumn fx:id="dateColumn" prefWidth="94.4000244140625" text="Date" />
+            <TableColumn fx:id="statusColumn" prefWidth="162.39996337890625" text="Status" />
+        </columns>
+      </TableView>
+      <Label layoutX="258.0" layoutY="336.0" style="-fx-background-color: #E8E6C5;" text="Recent Activities">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

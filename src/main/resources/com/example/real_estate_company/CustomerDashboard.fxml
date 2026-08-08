@@ -2,6 +2,8 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -12,12 +14,50 @@
             <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
-      <Button layoutY="46.0" mnemonicParsing="false" onAction="#searchButton" prefHeight="53.0" prefWidth="107.0" style="-fx-background-color: #E8E6C5;" text="Search Property" />
-      <Button layoutY="100.0" mnemonicParsing="false" onAction="#bookButton" prefHeight="53.0" prefWidth="107.0" style="-fx-background-color: #E8E6C5;" text="Book Property" />
-      <Button layoutY="154.0" mnemonicParsing="false" onAction="#reserveButton" prefHeight="53.0" prefWidth="107.0" style="-fx-background-color: #E8E6C5;" text="Reserve Property" />
-      <Button layoutY="208.0" mnemonicParsing="false" onAction="#paymentButton" prefHeight="53.0" prefWidth="107.0" style="-fx-background-color: #E8E6C5;" text="Make Payment" />
-      <Button layoutY="259.0" mnemonicParsing="false" onAction="#invoiceButton" prefHeight="53.0" prefWidth="107.0" style="-fx-background-color: #E8E6C5;" text="View Invoice" />
-      <Button layoutY="313.0" mnemonicParsing="false" onAction="#contractButton" prefHeight="53.0" prefWidth="107.0" style="-fx-background-color: #E8E6C5;" text="Sign Contract" />
-      <Button layoutY="367.0" mnemonicParsing="false" onAction="#logoutButton" prefHeight="53.0" prefWidth="107.0" style="-fx-background-color: #E8E6C5;" text="Logout" />
+      <Button layoutY="63.0" mnemonicParsing="false" onAction="#searchButton" prefHeight="53.0" prefWidth="107.0" style="-fx-background-color: #E8E6C5;" text="Search Property" />
+      <Button layoutY="137.0" mnemonicParsing="false" onAction="#bookButton" prefHeight="53.0" prefWidth="107.0" style="-fx-background-color: #E8E6C5;" text="Book Property" />
+      <Button layoutY="218.0" mnemonicParsing="false" onAction="#reserveButton" prefHeight="53.0" prefWidth="107.0" style="-fx-background-color: #E8E6C5;" text="Reserve Property" />
+      <Button layoutY="287.0" mnemonicParsing="false" onAction="#paymentButton" prefHeight="53.0" prefWidth="107.0" style="-fx-background-color: #E8E6C5;" text="Make Payment" />
+      <Button layoutY="362.0" mnemonicParsing="false" onAction="#invoiceButton" prefHeight="53.0" prefWidth="107.0" style="-fx-background-color: #E8E6C5;" text="View Invoice" />
+      <Button layoutY="435.0" mnemonicParsing="false" onAction="#contractButton" prefHeight="53.0" prefWidth="107.0" style="-fx-background-color: #E8E6C5;" text="Sign Contract" />
+      <Button layoutY="503.0" mnemonicParsing="false" onAction="#logoutButton" prefHeight="53.0" prefWidth="107.0" style="-fx-background-color: #E8E6C5;" text="Logout" />
+      <Label layoutX="294.0" layoutY="53.0" style="-fx-background-color: #E3EACB;" text="Customer Information">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="customerIdLabel" layoutX="158.0" layoutY="100.0" text="Customer ID :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="customerNameLabel" layoutX="161.0" layoutY="144.0" text="Name :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="customerEmailLabel" layoutX="158.0" layoutY="188.0" text="Email :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="customerPhoneLabel" layoutX="160.0" layoutY="235.0" text="Phone :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="321.0" layoutY="275.0" style="-fx-background-color: #E3EACB;" text="Recent Bookings">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="recentBookingsTable" layoutX="133.0" layoutY="316.0" prefHeight="226.0" prefWidth="457.0">
+        <columns>
+          <TableColumn fx:id="propertyColumn" prefWidth="100.800048828125" text=" Property" />
+          <TableColumn fx:id="locationColumn" prefWidth="100.79998779296875" text="Location" />
+            <TableColumn fx:id="dateColumn" prefWidth="107.20001220703125" text="Date " />
+            <TableColumn fx:id="statusColumn" prefWidth="138.39993286132812" text="Status     " />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>
