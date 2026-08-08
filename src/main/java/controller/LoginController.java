@@ -11,6 +11,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class LoginController {
     @javafx.fxml.FXML
@@ -40,7 +41,8 @@ public class LoginController {
 
             try {
 
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/CustomerDashboard.fxml"));
+                FXMLLoader loader = new FXMLLoader(
+                        getClass().getResource("/com/example/real_estate_company/CustomerDashboard.fxml"));
                 Parent root = loader.load();
 
                 Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
@@ -57,7 +59,8 @@ public class LoginController {
 
             try {
 
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/HRDashboard.fxml"));
+                FXMLLoader loader = new FXMLLoader(
+                        getClass().getResource("/com/example/real_estate_company/HRDashboard.fxml"));
                 Parent root = loader.load();
 
                 Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
@@ -72,6 +75,27 @@ public class LoginController {
 
         }
     }
+
+    @javafx.fxml.FXML
+    public void registrationButton(ActionEvent actionEvent) throws IOException {
+
+        try {
+            FXMLLoader loader = new FXMLLoader(
+                    Objects.requireNonNull(
+                            getClass().getResource("/com/example/real_estate_company/Registration.fxml")));
+
+            Parent root = loader.load();
+
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Customer Registration");
+            stage.show();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }
 
 
